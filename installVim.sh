@@ -1,12 +1,13 @@
 #!/bin/bash
+pth=$(pwd)
 cd ~
 mkdir -p .vim/bundle
 mkdir -p .vim/colors
 
-cp environment/.vimrc .
+cp $pth/.vimrc .
 
 cd ~/.vim/colors/
-cp ~/environment/jellybeans.vim .
+cp $pth/jellybeans.vim .
 
 cd ~/.vim/bundle/
 git clone https://github.com/VundleVim/Vundle.vim.git
